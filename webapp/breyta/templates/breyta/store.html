@@ -2,7 +2,7 @@
 
 {% block nav_block%}
 <ul class="nav">
-    <li >
+    <li>
         <a href="{% url 'breyta:main' %}">
             <i class="nc-icon nc-bank"></i>
             <p>Inicio</p>
@@ -30,9 +30,34 @@
 {% endblock%}
 
 {% block title_block %}
-<span class="navbar-brand" >Tienda</span>
+<span class="navbar-brand">Tienda</span>
 {% endblock %}
 
 {% block content_block %}
-<h3 class="description">Your content here</h3>
-{% endblock %}
+
+<link href="{{STATIC_URL}}  /static/billeteras/billetera.css" rel="stylesheet" />
+
+<nav class="accordion arrows">
+    <header class="box">
+        <label for="acc-close" class="box-title">Servicios</label>
+    </header>
+    <input type="radio" name="accordion" id="cb1" />
+    <section class="box">
+        <label class="box-title" for="cb1">Compra</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">
+            <form action="">
+                <label for="criptomoneda">Billetera</label>
+                <select name="criptomoneda" id="cripto">
+                    <option value="BTC">Bitcoin</option>
+                    <option value="ETH">Ethereum</option>
+                    <option value="XRP">XRP</option>
+                    <option value="LTC">Litecoin</option>
+                </select><br>
+
+            </form>
+
+        </div>
+    </section>
+
+    {% endblock %}
