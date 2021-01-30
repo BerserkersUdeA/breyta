@@ -1,12 +1,96 @@
 {% extends 'breyta/base.html' %}
+
+
+
+
+
 {% block body_block %}
-  <div class="container">
-    <div class="jumbotron">
-      <h1>Login here :</h1><form method="post" action="{% url 'breyta:user_login' %}">
-          {% csrf_token %}
-          {# A more "HTML" way of creating the login form#}
-          <label for="username">Username:</label>
-          <input type="text" name="username" placeholder="Username"><label for="password">Password:</label>
-          <input type="password" name="password" placeholder="Password"><input type="submit" name="" value="Login"></form></div>
+<div class="container" style="text-align: center;">
+  <div class="jumbotron">
+    <h1>Por favor inicie sesión para continuar</h1>
+
+    <br>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <a class="btn big-login" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Log in</a>
+        <!--<a class="btn big-register" data-toggle="modal" href="javascript:void(0)"
+        onclick="openRegisterModal();">Register</a> -->
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+    <span>¿No tiene una cuenta?
+      <a href="{% url 'breyta:register' %}">Registrese aquí</a>
+    </span>
   </div>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+  <div class="modal fade login" id="loginModal">
+    <div class="modal-dialog login animated">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Iniciar sesión</h4>
+        </div>
+        <div class="modal-body">
+          <div class="box">
+            <div class="content">
+              <div class="social">
+                <a class="circle github" href="#">
+                  <i class="fa fa-github fa-fw"></i>
+                </a>
+                <a id="google_login" class="circle google" href="#">
+                  <i class="fa fa-google-plus fa-fw"></i>
+                </a>
+                <a id="facebook_login" class="circle facebook" href="#">
+                  <i class="fa fa-facebook fa-fw"></i>
+                </a>
+              </div>
+              <div class="division">
+                <div class="line l"></div>
+                <span>or</span>
+                <div class="line r"></div>
+              </div>
+              <div class="error"></div>
+              <div class="form loginBox">
+                <form method="POST" action="{% url 'breyta:user_login' %}" accept-charset="UTF-8">
+                  {% csrf_token %}
+                  {# A more "HTML" way of creating the login form#}
+                  <input type="text" class="form-control" name="username" placeholder="Username">
+                  <!-- <input id="email" class="form-control" type="text" placeholder="Email" name="email"> -->
+                  <!-- <input id="password" class="form-control" type="password" placeholder="Password" name="password"> -->
+                  <input type="password" class="form-control" name="password" placeholder="Password">
+                  <!-- <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()"> -->
+                  <input class="btn btn-default btn-login" type="submit" name="" value="Login">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="forgot login-footer">
+            <span>¿No tiene una cuenta?
+              <a href="{% url 'breyta:register' %}">Registrese aquí</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function () {
+    openLoginModal();
+  });
+</script>
+
 {% endblock %}
