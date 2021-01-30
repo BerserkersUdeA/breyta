@@ -1,14 +1,40 @@
 {% extends "breyta/base.html" %}
-
 {% block body_block %}
 <div class="container">
   <div class="jumbotron">
-    <h1>Welcome to the Djungle !</h1>
-    {% if user.is_authenticated %}
-        <h2>Hello {{ user.username }}</h2>
-    {% else %}
-        <h2>Register or Login if you'd like to</h2>
-    {% endif %}
+    
+
+
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <div class="logo-image-big panel">
+                <img class="imagen_inicio" src="{{STATIC_URL}}  /static/img/LOGO_nobg.png">
+              </div>
+            </th>
+            {% if user.is_authenticated %}
+            <th>
+              <span style="color: rgba(0, 0, 0, 0);">xxxxxxxxxxx</span>
+            </th>
+            <th class="texto">
+              <h1>¡Bienvenido!</h1>
+              
+              <h2>Hola {{ user.username }}</h2>
+              {% else %}
+              <th>
+                <span style="color: rgba(0, 0, 0, 0);"></span>
+              </th>
+              <th class="texto">
+                <h1>¡Bienvenido!</h1>
+              <h2>Regístrate o inicia sesión para continuar</h2>
+              {% endif %}
+            </th>
+          </tr>
+        </thead>
+      </table>
+
+
+    
   </div>
-</div>
-{% endblock %}
+</div>{% endblock %}
