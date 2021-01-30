@@ -15,9 +15,6 @@ from breyta.forms import UserForm
 # Create your views here.
 
 
-# def home(request):
-
-#     return render(request, "breyta/base.html")
 
 
 def index(request):

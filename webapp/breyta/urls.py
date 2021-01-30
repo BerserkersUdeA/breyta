@@ -15,7 +15,8 @@ urlpatterns=[
     url(r'^main/$',views.inicio, name='main'),
     url(r'^billetera/$',views.billetera, name='billetera'),
     url(r'^store/$',views.store, name='store'),
-    url(r'^aboutus/$',views.aboutus, name='aboutus')
+    url(r'^aboutus/$',views.aboutus, name='aboutus'),
+    url(r'', views.index, name='home')
 ]
 
 if settings.DEBUG:
