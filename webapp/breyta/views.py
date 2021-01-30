@@ -72,7 +72,8 @@ def user_login(request):
         if user:
             if user.is_active:
                 login(request, user)
-                return HttpResponseRedirect(reverse('index'))
+                return render(request, 'breyta/main.html', {})
+                #HttpResponseRedirect(reverse('index'))
             else:
                 return HttpResponse("Your account was inactive.")
         else:
