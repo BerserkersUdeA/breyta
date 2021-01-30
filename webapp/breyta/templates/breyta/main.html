@@ -68,7 +68,8 @@ Coded by www.creative-tim.com
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">Title</a>
+            {% block title_block %}
+            {% endblock %}
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
             aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,7 +110,8 @@ Coded by www.creative-tim.com
       <div class="content">
         <div class="row">
           <div class="col-md-12">
-            <h3 class="description">Your content here</h3>
+            {% block content_block %}
+            {% endblock %}
           </div>
         </div>
       </div>
@@ -118,8 +120,6 @@ Coded by www.creative-tim.com
           <div class="row">
             <nav class="footer-nav">
               <ul>
-                <li><a href="https://www.creative-tim.com" target="_blank">Creative Tim</a></li>
-                <li><a href="https://www.creative-tim.com/blog" target="_blank">Blog</a></li>
                 <li><a href="https://www.creative-tim.com/license" target="_blank">Licenses</a></li>
               </ul>
             </nav>
