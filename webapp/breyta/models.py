@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 
 class UserProfileInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    profile_pic = models.ImageField(upload_to='profile_pics', blank=True)
     bitcoin = models.CharField(max_length=256, blank=True)
     xrp = models.CharField(max_length=256, blank=True)
     ethereum = models.CharField(max_length=256, blank=True)
