@@ -20,5 +20,19 @@
             <p>Compraventa</p>
         </a>
     </li>
+    <li>
+        <a href="{% url 'breyta:aboutus' %}">
+            <i class="nc-icon nc-icon nc-planet"></i>
+            <p>Acerca de nosotros</p>
+        </a>
+    </li>
 </ul>
 {% endblock%}
+
+{% block title_block %}
+<span class="navbar-brand" >Tienda</span>
+{% endblock %}
+
+{% block content_block %}
+<h3 class="description">Your content here</h3>
+{% endblock %}
