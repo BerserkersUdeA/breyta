@@ -36,6 +36,12 @@ def billetera(request):
 def store(request):
     return render(request, 'breyta/store.html')
 
+
+@login_required
+def aboutus(request):
+    return render(request, 'breyta/aboutus.html')
+
+
 @login_required
 def special(request):
     return HttpResponse("You are logged in !")

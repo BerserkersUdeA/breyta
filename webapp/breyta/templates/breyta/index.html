@@ -1,5 +1,7 @@
 {% extends "breyta/base.html" %}
-{% block body_block %}<div class="container">
+
+{% block body_block %}
+<div class="container">
   <div class="jumbotron">
     <h1>Welcome to the Djungle !</h1>
     {% if user.is_authenticated %}
@@ -8,4 +10,5 @@
         <h2>Register or Login if you'd like to</h2>
     {% endif %}
   </div>
-</div>{% endblock %}
+</div>
+{% endblock %}

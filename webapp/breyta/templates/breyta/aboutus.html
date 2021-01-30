@@ -1,0 +1,73 @@
+{% extends 'breyta/main.html' %}
+
+{% block nav_block%}
+<ul class="nav">
+    <li>
+        <a href="{% url 'breyta:main' %}">
+            <i class="nc-icon nc-bank"></i>
+            <p>Inicio</p>
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'breyta:billetera' %}">
+            <i class="nc-icon nc-diamond"></i>
+            <p>Billetera</p>
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'breyta:store' %}">
+            <i class="nc-icon nc-pin-3"></i>
+            <p>Compraventa</p>
+        </a>
+    </li>
+    <li class="active ">
+        <a href="{% url 'breyta:aboutus' %}">
+            <i class="nc-icon nc-icon nc-planet"></i>
+            <p>Acerca de nosotros</p>
+        </a>
+    </li>
+</ul>
+{% endblock%}
+
+
+{% block title_block %}
+<span class="navbar-brand">Acerca de nosotros</span>
+{% endblock %}
+
+{% block content_block %}
+<center>
+    <!-- <img src="{{STATIC_URL}}  /static/img/LOGO_nobg.png" width="150" height="100" style="text-align: center ;"> -->
+
+    <table style="border: 0px; text-align: center;">
+        <thead>
+            <tr>
+                <th colspan="2">
+                    <h2>Integrantes</h1>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <h4>Alejandro Mesa Gómez</h4><a href="https://github.com/cosmolejo">@Cosmolejo</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Hernan Javier Aguilar Cruz</h4><a href="https://github.com/HernanAC">@HernanAC</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>John Janer Torres Restrepo</h4><a href="https://github.com/JanerTorres">@JanerTorres</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Cristhian Javer González Rodríguez</h4><a href="https://github.com/krisg23">@krisg23</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</center>
+{% endblock %}
