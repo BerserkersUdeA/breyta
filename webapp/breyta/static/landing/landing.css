@@ -1,0 +1,19 @@
+nav{
+        
+        background-color: rgba(255, 255, 255, 0.082)
+}
+
+.imagen_inicio{
+    max-width:100%;
+    height:350px;
+    
+}
+
+.panel{
+    margin-left: 10px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.texto{
+    text-align: center;
+}
