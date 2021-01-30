@@ -15,9 +15,6 @@ from breyta.forms import UserForm
 # Create your views here.
 
 
-# def home(request):
-
-#     return render(request, "breyta/base.html")
 
 
 def index(request):
@@ -35,6 +32,12 @@ def billetera(request):
 @login_required
 def store(request):
     return render(request, 'breyta/store.html')
+
+
+@login_required
+def aboutus(request):
+    return render(request, 'breyta/aboutus.html')
+
 
 @login_required
 def special(request):

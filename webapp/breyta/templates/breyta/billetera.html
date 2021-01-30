@@ -1,5 +1,4 @@
 {% extends 'breyta/main.html' %}
-
 {% block nav_block%}
 <ul class="nav">
     <li>
@@ -20,10 +19,169 @@
             <p>Compraventa</p>
         </a>
     </li>
-    
+    <li>
+        <a href="{% url 'breyta:aboutus' %}">
+            <i class="nc-icon nc-icon nc-planet"></i>
+            <p>Acerca de nosotros</p>
+        </a>
+    </li>
 </ul>
-
-
-
-
 {% endblock%}
+{% block title_block %}
+
+<span class="navbar-brand">Billeteras</span>
+{% endblock %}
+{% block content_block %}
+<link href="{{STATIC_URL}}  /static/billeteras/billetera.css" rel="stylesheet" />
+
+<nav class="accordion arrows">
+    <header class="box">
+        <label for="acc-close" class="box-title">criptomonedas</label>
+    </header>
+    <input type="radio" name="accordion" id="cb1" />
+    <section class="box">
+        <label class="box-title" for="cb1">Bitcoin</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">
+            <table style="border: 0px;">
+                <thead>
+                    <tr>
+                        <th colspan="3">
+                            <h3>Billetera</h3>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td colspan="3"> AA88D0AC0C7BD5C99391B8CD51EAA832239F52A5EFE59FC2EF73DD89BA5F5BED </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><span style="color: #ffff;">xxx</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Saldo</h4>
+                        </td>
+                        <td> 2.005 </td>
+                        <td>
+                            <b>BTC</b>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+    <input type="radio" name="accordion" id="cb2" />
+    <section class="box">
+        <label class="box-title" for="cb2">Ethereum</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">
+            <table style="border: 0px;">
+                <thead>
+                    <tr>
+                        <th colspan="3">
+                            <h3>Billetera</h3>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td colspan="3"> F86B1BE0DD89D048F3947FFBF74848A59C5911318871345F3232B30DC546B3C4 </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><span style="color: #ffff;">xxx</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Saldo</h4>
+                        </td>
+                        <td> 10 </td>
+                        <td>
+                            <b>ETH</b>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <input type="radio" name="accordion" id="cb3" />
+    <section class="box">
+        <label class="box-title" for="cb3">XRP</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">
+            <table style="border: 0px;">
+                <thead>
+                    <tr>
+                        <th colspan="3">
+                            <h3>Billetera</h3>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td colspan="3"> 24481EBF1925F8DA645803EAAC61038CB73B50C4CEB33539E0DBC38933F923C2 </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><span style="color: #ffff;">xxx</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Saldo</h4>
+                        </td>
+                        <td> 0.005 </td>
+                        <td>
+                            <b>XRP</b>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <input type="radio" name="accordion" id="cb4" />
+    <section class="box">
+        <label class="box-title" for="cb4">Litecoin</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">
+            <table style="border: 0px;">
+                <thead>
+                    <tr>
+                        <th colspan="3">
+                            <h3>Billetera</h3>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td colspan="3"> 575970F7132C96DCF86482EC4A16CD14A733C7E08EF51293138D173539A08AC0 </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><span style="color: #ffff;">xxx</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Saldo</h4>
+                        </td>
+                        <td> 1.002 </td>
+                        <td>
+                            <b>LTC</b>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <input type="radio" name="accordion" id="acc-close" />
+</nav>
+
+
+
+
+
+{% endblock %}

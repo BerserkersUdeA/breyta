@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\Mmon\\anaconda3\\envs\\breyta\\python.exe",
+    "python.pythonPath": "/home/antares/anaconda3/envs/breyta/bin/python",
     "python.formatting.provider": "yapf"
 }
