@@ -1,0 +1,30 @@
+{% extends 'breyta/main.html' %}
+
+{% block nav_block%}
+<ul class="nav">
+    <li >
+        <a href="{% url 'breyta:main' %}">
+            <i class="nc-icon nc-bank"></i>
+            <p>Inicio</p>
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'breyta:billetera' %}">
+            <i class="nc-icon nc-diamond"></i>
+            <p>Billetera</p>
+        </a>
+    </li>
+    <li class="active ">
+        <a href="{% url 'breyta:store' %}">
+            <i class="nc-icon nc-pin-3"></i>
+            <p>Compraventa</p>
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'logout' %}">
+            <i class="nc-icon nc-pin-3"></i>
+            <p>logout</p>
+        </a>
+    </li>
+</ul>
+{% endblock%}

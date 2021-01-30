@@ -25,6 +25,18 @@ def index(request):
 
 
 @login_required
+def inicio(request):
+    return render(request, 'breyta/inicio.html')
+
+@login_required
+def billetera(request):
+    return render(request, 'breyta/billetera.html')
+
+@login_required
+def store(request):
+    return render(request, 'breyta/store.html')
+
+@login_required
 def special(request):
     return HttpResponse("You are logged in !")
 
@@ -72,8 +84,8 @@ def user_login(request):
         if user:
             if user.is_active:
                 login(request, user)
-                return render(request, 'breyta/main.html', {})
-                #HttpResponseRedirect(reverse('index'))
+                return redirect('breyta:main')
+                #render(request, 'breyta/main.html', {})
             else:
                 return HttpResponse("Your account was inactive.")
         else:

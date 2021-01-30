@@ -16,8 +16,9 @@
  */
 
 (function() {
+ 
   isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
-
+  isLinux = navigator.platform.indexOf('Linux x86_64') > -1 ? true : false;
   if (isWindows) {
     // if we are on windows OS we activate the perfectScrollbar function
     var ps = new PerfectScrollbar('.sidebar');
